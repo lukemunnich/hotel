@@ -89,5 +89,42 @@ if (isset($_POST['submit'])) {
    $_SESSION['indate']= $_POST['indate'];
    $_SESSION['outdate']= $_POST['outdate'];
 
+//calculate duration of user's stay at hotel
+$datetime1 = new DateTime($_SESSION['indate']);
+$datetime2 = new DateTime($_SESSION['outdate']);
+$interval = $datetime1->diff($datetime2);
 
+$interval->format('%d');
+
+$checkInStamp = strtotime($_SESSION['indate']);
+        $checkOutStamp = strtotime($_SESSION['outdate']);
+        if ($checkInStamp - $checkOutStamp > 86400 || $checkInStamp == $checkOutStamp) {
+            header("Location: ?error=timestamp");
+            exit;
+        }
+
+//number of days booked 
+$daysbooked = $interval->format('%d');
+$value;
+
+switch(isset($_SESSION['hotelname'])){
+   case 'Holiday Inn':
+   $value = $daysbooked * 200;
+   break;
+
+   case 'Radison':
+   $value = $daysbooked * 100;
+   break;
+
+   case 'City Lodge':
+   $value = $daysbooked * 400;
+   break;
+
+   case 'Town Lodge':
+   $value = $daysbooked * 150;
+   break;
+
+   default:
+   return "ERROR!";
+}
 
