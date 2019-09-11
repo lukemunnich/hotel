@@ -153,4 +153,26 @@ echo '<div class="return">'. "<br> Firstname:".  $_SESSION['firstname']."<br>".
 
 echo "<form role='form' action=" . htmlspecialchars($_SERVER['PHP_SELF']) . " method='post'>
 <button name='confirm' type='submit'> Confirm </button> </form>".'</div>';
+}
 
+// creating a method
+if(isset($_POST['confirm'])){
+$stmt=$conn->prepare("INSERT INTO bookings(firstname,surname,hotelname,indate,outdate) VALUES (?,?,?,?,?)");
+$stmt->bind_param('sssss', $firstname,$surname,$hotelname,$indate,$outdate);
+$firstname=$_SESSION['firstname'];
+$surname=$_SESSION['surname'];
+$hotelname=$_SESSION['hotelname'];
+$indate=$_SESSION['indate'];
+$outdate=$_SESSION['outdate'];
+$stmt->execute();
+echo '<div id="confirmed">'."Booking confirmed".'</div>';
+}
+
+?>
+
+
+
+
+
+</body>
+</html>
