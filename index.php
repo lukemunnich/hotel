@@ -10,13 +10,20 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+
+<!-- linking stylesheets and google fonts -->
+<link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <title>hotel booking</title>
+
+<title>hotel booking</title>
 </head>
+
 <body>
+
+<!-- creating hotel options -->
 <h1>choose your dream Holiday</h1>
+
 <div class="price">
 <p id="inn">Holiday Inn: R 200 pp per night</p>
 <p id="rad">Ranger Bay Hotel: R 100 pp per night</p>
@@ -24,6 +31,7 @@ session_start();
 <p id="town">City Main Town Lodge: R 150 pp per night</p>
 </div>
 
+<!-- creating a form -->
 <div id='form'>
 <form role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
@@ -42,9 +50,44 @@ session_start();
 <label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
 <button class="submit" name="submit" type="submit">Submit</button>
 
-
 </form>
-</div>
 
-</body>
-</html>
+<!-- using php to creat table in mysql -->
+<?php
+require_once "connect.php";
+echo $conn->error;
+
+$sql = "CREATE TABLE IF NOT EXISTS bookings (
+   id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+   firstname VARCHAR(50),
+   surname VARCHAR(50),
+   hotelname VARCHAR(50),
+   indate VARCHAR(30),
+   outdate VARCHAR(30),
+   booked INT(4))";
+
+
+$conn ->query($sql);
+
+if (isset($_GET['error']) && $_GET['error'] == 'timestamp') {
+
+   ?>
+
+<div class='panel panel-default'>
+   <h1>
+      You must select at least  1 day 
+   </h1>
+      </div>
+
+      <?php
+   }
+
+if (isset($_POST['submit'])) {
+   $_SESSION['firstname']= $_POST['firstname'];
+   $_SESSION['surname']= $_POST['surname'];
+   $_SESSION['hotelname']= $_POST['hotelname'];
+   $_SESSION['indate']= $_POST['indate'];
+   $_SESSION['outdate']= $_POST['outdate'];
+
+
+
