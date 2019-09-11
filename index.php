@@ -128,3 +128,29 @@ switch(isset($_SESSION['hotelname'])){
    return "ERROR!";
 }
 
+$firstname = $_POST['firstname'];
+$surname = $_POST['surname'];
+
+$result = mysqli_query($conn,"SELECT hotelname, indate, outdate, firstname, surname FROM bookings WHERE firstname='$firstname' && surname='$surname'"); 
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {    
+ echo "<div class='duplicate'> You already have a booking. <br> Firstname: ". $row['firstname'] . "<br>
+Lastname: " . $row['surname'].
+"<br> Start Date: " . $row['indate'].
+"<br> End Date: " . $row['outdate'].
+"<br> Hotel Name: " . $row['hotelname'].
+"<br>" . $interval->format('%r%a days') . "<br> Total: R " . $value ."</div>";
+    } 
+}
+
+
+echo '<div class="return">'. "<br> Firstname:".  $_SESSION['firstname']."<br>".
+"surname:".  $_SESSION['surname']."<br>".
+"Start Date:". $_SESSION['indate']."<br>".
+"End Date:". $_SESSION['outdate']."<br>".
+"Hotel Name:". $_SESSION['hotelname']."<br>".
+"Total R" . $value ;
+
+echo "<form role='form' action=" . htmlspecialchars($_SERVER['PHP_SELF']) . " method='post'>
+<button name='confirm' type='submit'> Confirm </button> </form>".'</div>';
+
