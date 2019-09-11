@@ -24,6 +24,27 @@ session_start();
 <p id="town">City Main Town Lodge: R 150 pp per night</p>
 </div>
 
+<div id='form'>
+<form role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+
+<label>First Name<input type="text" name="firstname" placeholder='First Name' required></label><br>
+<label>Surname<input type="text" name="surname"placeholder='surname' required></label><br>
+<label>Hotel Name
+<select name="hotelname" required>
+  <option value="Holiday Inn">Holiday Inn</option>
+  <option value="Radison">Ranger</option>
+  <option value="City Lodge">City Family Lodge</option>
+  <option value="Town Lodge">City Main Town Lodge</option>
+</select>
+</label><br>
+
+<label>In Date<input type="date" name="indate" placeholder='indate' required></label><br>
+<label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
+<button class="submit" name="submit" type="submit">Submit</button>
+
+
+</form>
+</div>
 
 </body>
 </html>
