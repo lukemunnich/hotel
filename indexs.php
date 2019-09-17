@@ -13,9 +13,9 @@ session_start();
 
 <!-- linking stylesheets and google fonts -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
-<link rel="stylesheet" href="css/hotel.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
+<link rel="stylesheet" href="css/hotel.css">
 
 <title>hotel booking</title>
 </head>
@@ -38,41 +38,22 @@ session_start();
 
 <label>First Name<input type="text" name="firstname" placeholder='First Name' required></label><br>
 <label>Surname<input type="text" name="surname"placeholder='surname' required></label><br>
-<label>In Date<input type="date" name="indate" placeholder='indate' required></label><br>
-
-<label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
-<select name="hotelname" >
-
-<fieldset>
-
-  <input type="radio" option value="Holiday Inn" name="hotelname" class="sr-only" id="one">
-  holiday inn
-  <label for="male">
-    <img id="images" src="images/Raddisson.jpg" alt="two">
-  </label>
-  <input type="radio" option value="Radison" name="hotelname" class="sr-only" id="female">
-  raddison
-  <label for="female">
-    <img id="images" src="images/hotel.jpeg" alt="three">
-  </label>
-  <input type="radio" option value="City lodge" name="hotelname" class="sr-only" id="male">
-  city lodge
-  <label for="male">
-    <img id="images" src="images/campsbay.jpg.webp" alt="city lodge">
-</label>
-<input type="radio" option value="Town lodge" name="hotelname" class="sr-only" id="male">
-town lodge
-  <label for="male">
-    <img id="images" src="images/city.jpg" alt="four">
-</label>
-  
-</fieldset>
+<label>Hotel Name
+<select name="hotelname" required>
+  <option value="Holiday Inn">Holiday Inn</option>
+  <option value="Radison">Radison</option>
+  <option value="City Lodge">City Lodge</option>
+  <option value="Town Lodge">Town Lodge</option>
 </select>
 </label><br>
+
+<label>In Date<input type="date" name="indate" placeholder='indate' required></label><br>
+<label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
 <button class="submit" name="submit" type="submit">Submit</button>
 
 
 </form>
+</div>
 
 <!-- using php to creat table in mysql -->
 <?php

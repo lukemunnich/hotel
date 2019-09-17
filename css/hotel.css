@@ -1,11 +1,13 @@
 
 /* styling body */
 body{
+    height:100%;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color:rgb(224, 59, 59);
-    /* background:url('../images/campsbay.jpg.webpfd'); */
+    background:url('/hotel/images/city.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     font-size: 1rem;
 }
@@ -13,7 +15,7 @@ body{
 /* styling image as a button */
 label {
     cursor: pointer;
-    filter: grayscale(100%);
+    filter: grayscale(50%);
   }
 
   label:hover {
@@ -21,19 +23,20 @@ label {
   }
 
   input[type="radio"]:checked + label {
-    filter: grayscale(0);
+    filter: grayscale(100%);
   }
 
   #images{
-      height:100px;
-      width:100px;
+      height:px;
+      width:200px;
   }
 
 /*styling header  */
 h1{
+  
     animation:blinkingText 0.8s;
     animation-iteration-count: 5;
-    margin-left: 35%; 
+    margin-left: 25%; 
 }
 
 /* styling classes and p tag */
@@ -144,3 +147,13 @@ button{
     animation-iteration-count: 5;
 }
 
+.container{
+ width:100%;
+ padding-top: 100px;
+}
+
+.price{
+    margin-right: 35%; 
+    color:black;
+    font-family: 'Bungee';font-size: 22px; 
+}
