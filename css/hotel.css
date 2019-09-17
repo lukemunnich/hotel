@@ -6,10 +6,28 @@ body{
     /* background:url('../images/campsbay.jpg.webpfd'); */
     background-size: cover;
     font-size: 1rem;
-    
 }
 
 label {
     cursor: pointer;
     filter: grayscale(100%);
   }
+
+  label:hover {
+    filter: grayscale(0);
+  }
+
+  input[type="radio"]:checked + label {
+    filter: grayscale(0);
+  }
+
+  #images{
+      height:100px;
+      width:100px;
+  }
+
+h1{
+    animation:blinkingText 0.8s;
+    animation-iteration-count: 5;
+    margin-left: 35%; 
+}
