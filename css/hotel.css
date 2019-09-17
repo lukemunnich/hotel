@@ -82,6 +82,7 @@ p{
     font-weight: bold;
 }
 
+/* styling the input */
 input {
     width: 100%;
     padding: 5px 15px;
@@ -89,3 +90,34 @@ input {
     box-sizing: border-box;
     font-size: 1rem;
   }
+
+  /* styling the submit button */
+  .submit{
+    background:grey;
+    width: 30%;
+    padding: 5px 15px;
+    
+}
+
+
+.duplicate{
+    border-style: solid;
+   background:rgb(195, 188, 214);
+   margin-top: 2%;
+    margin-left:0%;
+    margin-right:10%;
+    float:right;
+    
+}
+
+/* styling the return box div */
+.return{
+    border-style: solid;
+   background:aquamarine;
+   margin-top: 5%;
+    margin-left:0%;
+    margin-right:15%;
+    float:right;
+    
+}
+ 
