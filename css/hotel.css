@@ -1,0 +1,15 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    background-color:rgb(224, 59, 59);
+    /* background:url('../images/campsbay.jpg.webpfd'); */
+    background-size: cover;
+    font-size: 1rem;
+    
+}
+
+label {
+    cursor: pointer;
+    filter: grayscale(100%);
+  }
