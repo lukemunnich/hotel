@@ -85,8 +85,8 @@ input[type="radio"]:checked + label {
   }
 
 #images{
-      height:px;
-      width:200px;
+      height:150px;
+      width:100px;
   }
 
 /*styling header  */
@@ -248,4 +248,8 @@ input {
     width: 40%;
     padding: 5px 15px;
     margin-left:35%;
+}
+
+.image-holder{
+    background-color: rgb(218, 195, 70);
 }

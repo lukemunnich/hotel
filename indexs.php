@@ -23,19 +23,24 @@ session_start();
 <body>
 
 <!-- creating hotel options -->
+<div class="image-holder">
 <h1><b>choose your dream Holiday</b></h1>
 <div class="row">
   <div class="column">
-    <img src="img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+     <h2>Holiday inn</h2>
+    <img id="images" src="/hotel/images/city.jpg" alt="Holiday inn" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="img_snow.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+     <h2>Raddisson</h2>
+    <img id="images" src="/hotel/images/images.jpg" alt="Raddisson" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="img_mountains.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  <h2>City Lodge</h2>
+    <img id="images" src="/hotel/images/campsbay.jpg" alt="City Lodge" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="img_lights.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  <h2>Town Lodge</h2>
+    <img id="images" src="/hotel/images/Raddisson.jpg" alt="Town lodge" style="width:100%" onclick="myFunction(this);">
   </div>
 </div>
 
@@ -43,6 +48,7 @@ session_start();
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <img id="expandedImg" style="width:100%">
   <div id="imgtext"></div>
+</div>
 </div>
 
 <script>
