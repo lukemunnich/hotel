@@ -26,8 +26,39 @@ session_start();
 <div class="image-holder">
 <h1><b>choose your dream Holiday</b></h1>
 <div class="row">
+  <div class="col-md-3">
+  <h2> Holiday inn</h2>
+     <p> R400 pp per night </p>
+    <img id="images" src="/hotel/images/city.jpg" alt="Holiday inn" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="col-md-3">
+  <h2>Raddisson</h2>
+  <p> R250 pp per night </p>
+    <img id="images" src="/hotel/images/images.jpg" alt="Raddisson" style="width:100%" onclick="myFunction(this);">
+</div>
+  <div class="col-md-3">
+  <h2>City Lodge</h2>
+  <p> R600 pp per night </p>
+    <img id="images" src="/hotel/images/campsbay.jpg" alt="City Lodge" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="col-md-3">
+  <h2>Town Lodge</h2>
+  <p> 300 pp per night </p>
+    <img id="images" src="/hotel/images/Raddisson.jpg" alt="Town lodge" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<!-- 
+<div class="row">
   <div class="column">
-     <h2>Holiday inn</h2>
+     <h2> Holiday inn</h2>
+     <p> R400 pp per night </p>
     <img id="images" src="/hotel/images/city.jpg" alt="Holiday inn" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
@@ -42,7 +73,7 @@ session_start();
   <h2>Town Lodge</h2>
     <img id="images" src="/hotel/images/Raddisson.jpg" alt="Town lodge" style="width:100%" onclick="myFunction(this);">
   </div>
-</div>
+</div> -->
 
 <div class="container">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
