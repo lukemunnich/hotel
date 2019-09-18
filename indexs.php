@@ -27,9 +27,9 @@ session_start();
 <h1><b>choose your dream Holiday</b></h1>
 <div class="row">
   <div class="col-md-3">
-  <h2> Holiday inn</h2>
+  <h2> City Lodge</h2>
      <p> R400 pp per night </p>
-    <img id="images" src="/hotel/images/city.jpg" alt="Holiday inn" style="width:100%" onclick="myFunction(this);">
+    <img id="images" src="/hotel/images/hotel2.jpg" alt="Holiday inn" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="col-md-3">
   <h2>Raddisson</h2>
@@ -37,7 +37,7 @@ session_start();
     <img id="images" src="/hotel/images/images.jpg" alt="Raddisson" style="width:100%" onclick="myFunction(this);">
 </div>
   <div class="col-md-3">
-  <h2>City Lodge</h2>
+  <h2> Holiday inn</h2>
   <p> R600 pp per night </p>
     <img id="images" src="/hotel/images/campsbay.jpg" alt="City Lodge" style="width:100%" onclick="myFunction(this);">
   </div>

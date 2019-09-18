@@ -91,9 +91,13 @@ input[type="radio"]:checked + label {
 
 /*styling header  */
 h1{
-    animation:blinkingText 0.8s;
-    animation-iteration-count: 5;
+   color:rgb(238, 232, 216);
     margin-left: 25%; 
+}
+
+h2{
+    margin-left:40px;
+   
 }
 
 /* styling classes and p tag */
@@ -102,7 +106,7 @@ h1{
 }
 
 p{
-    margin: 1px;
+    margin-left:40px;
 }
 
 /* styling divs */
