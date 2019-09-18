@@ -39,12 +39,9 @@ session_start();
   <option value="Town Lodge">Town Lodge</option>
 </select>
 </label><br>
-
 <label>In Date<input type="date" name="indate" placeholder='indate' required></label><br>
 <label>Out Date<input type="date" name="outdate" placeholder='outdate' required></label><br>
-<button class="submit" name="submit" type="submit">Submit</button>
-
-
+<button class="submit" name="submit" type="submit" style="vertical-align:middle"><span>submit</span>
 </form>
 </div>
 

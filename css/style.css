@@ -95,18 +95,53 @@ input {
   }
 
   /* styling the submit button */
-  .submit{
-    background:grey;
-    width: 30%;
-    padding: 5px 15px;
-    
+.submit{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 40px;
 }
 
+/* creating hover effect for button */
+.submit span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .submit span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .submit:hover span {
+    padding-right: 25px;
+  }
+  
+  .submit:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
+
+/* styling duplicate */
 .duplicate{
     border-style: solid;
-   background:rgb(195, 188, 214);
-   margin-top: 2%;
+    background:rgb(195, 188, 214);
+    margin-top: 2%;
     margin-left:0%;
     margin-right:10%;
     float:right;
@@ -116,8 +151,8 @@ input {
 /* styling the return box div */
 .return{
     border-style: solid;
-   background:aquamarine;
-   margin-top: 5%;
+    background:aquamarine;
+    margin-top: 5%;
     margin-left:0%;
     margin-right:15%;
     float:right;
@@ -148,18 +183,8 @@ button{
 }
 
 .container{
- width:100%;
- padding-top: 100px;
-}
-
-.price{
-    margin-right: 35%; 
-    color:black;
-    font-family: 'Bungee';font-size: 22px;
+   width:100%;
+   padding-top: 100px;
 }
 
 
-#navbar{
-
-
-}
