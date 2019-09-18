@@ -24,6 +24,36 @@ session_start();
 
 <!-- creating hotel options -->
 <h1><b>choose your dream Holiday</b></h1>
+<div class="row">
+  <div class="column">
+    <img src="img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_snow.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_lights.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
 
 <!-- creating a form -->
 <div id='form'>
@@ -145,7 +175,7 @@ echo '<div class="return">'. "<br> Firstname:".  $_SESSION['firstname']."<br>".
 "Total R" . $value ;
 
 echo "<form role='form' action=" . htmlspecialchars($_SERVER['PHP_SELF']) . " method='post'>
-<button name='confirm' type='submit'> Confirm </button> </form>".'</div>';
+<button name='confirm' type='submit'id='buttons> Confirm </button> </form>".'</div>';
 }
 
 // creating a method

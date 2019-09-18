@@ -12,28 +12,85 @@ body{
     font-size: 1rem;
 }
 
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
 /* styling image as a button */
 label {
     cursor: pointer;
     filter: grayscale(50%);
   }
 
-  label:hover {
+label:hover {
     filter: grayscale(0);
   }
 
-  input[type="radio"]:checked + label {
+input[type="radio"]:checked + label {
     filter: grayscale(100%);
   }
 
-  #images{
+#images{
       height:px;
       width:200px;
   }
 
 /*styling header  */
 h1{
-  
     animation:blinkingText 0.8s;
     animation-iteration-count: 5;
     margin-left: 25%; 
@@ -140,19 +197,22 @@ input {
 /* styling duplicate */
 .duplicate{
     border-style: solid;
-    background:rgb(195, 188, 214);
+    background:rgb(223, 141, 34);
     margin-top: 2%;
     margin-left:0%;
-    margin-right:10%;
+    margin-right:15%;
     float:right;
     
 }
 
 /* styling the return box div */
 .return{
+    width:250px;
+    height:250px;
     border-style: solid;
-    background:aquamarine;
-    margin-top: 5%;
+    border-color: rgb(48, 47, 47);
+    background:rgb(223, 141, 34);
+    margin-top: 10%;
     margin-left:0%;
     margin-right:15%;
     float:right;
@@ -160,31 +220,32 @@ input {
 }
 
  /*styling the submit button  */
-button{
-    background:grey;
-    width: 40%;
-    padding: 5px 15px;
-    margin-left:35%;
-}
+
 
 /* adding styling for the confirmed div */
 #confirmed{
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left:0%;
     margin-right:10%;
     border: 0.4rem;
     float: right;;
     color:black;
-    background: gray;
+    background:rgb(238, 166, 84);
     font-size: 1.5rem;
     font-weight: bold;
     animation:blinkingText 0.8s;
     animation-iteration-count: 5;
 }
 
+
 .container{
    width:100%;
    padding-top: 100px;
 }
 
-
+#buttons{
+    background-color: #998ff1;
+    width: 40%;
+    padding: 5px 15px;
+    margin-left:35%;
+}
