@@ -7,9 +7,9 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- linking stylesheets and google fonts -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -54,33 +54,7 @@ session_start();
 </div>
 </div>
 
-<!-- 
-<div class="row">
-  <div class="column">
-     <h2> Holiday inn</h2>
-     <p> R400 pp per night </p>
-    <img id="images" src="/hotel/images/city.jpg" alt="Holiday inn" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-     <h2>Raddisson</h2>
-    <img id="images" src="/hotel/images/images.jpg" alt="Raddisson" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-  <h2>City Lodge</h2>
-    <img id="images" src="/hotel/images/campsbay.jpg" alt="City Lodge" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-  <h2>Town Lodge</h2>
-    <img id="images" src="/hotel/images/Raddisson.jpg" alt="Town lodge" style="width:100%" onclick="myFunction(this);">
-  </div>
-</div> -->
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:100%">
-  <div id="imgtext"></div>
-</div>
-</div>
 
 <script>
 function myFunction(imgs) {
@@ -131,7 +105,7 @@ $conn ->query($sql);
 
 if (isset($_GET['error']) && $_GET['error'] == 'timestamp') {
 
-   ?>
+ ?>
 
 <div class='panel panel-default'>
    <h1>

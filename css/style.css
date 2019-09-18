@@ -16,43 +16,39 @@ body{
     box-sizing: border-box;
   }
   
-  body {
-    margin: 0;
-    font-family: Arial;
-  }
-  
+
   /* The grid: Four equal columns that floats next to each other */
-  .column {
+.column {
     float: left;
     width: 25%;
     padding: 10px;
   }
   
   /* Style the images inside the grid */
-  .column img {
+.column img {
     opacity: 0.8; 
     cursor: pointer; 
   }
   
-  .column img:hover {
+.column img:hover {
     opacity: 1;
   }
   
   /* Clear floats after the columns */
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
   }
   
   /* The expanding image container */
-  .container {
+.container {
     position: relative;
     display: none;
   }
   
   /* Expanding image text */
-  #imgtext {
+#imgtext {
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -61,7 +57,7 @@ body{
   }
   
   /* Closable button inside the expanded image */
-  .closebtn {
+.closebtn {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -109,30 +105,6 @@ p{
     margin-left:40px;
 }
 
-/* styling divs */
-#inn{
-    animation:blinkingText 0.8s;
-    animation-iteration-count: 5;
-    margin-left: 45%;  
-}
-
-#rad{
-    animation:blinkingText 0.8s;
-    animation-iteration-count: 5;
-    margin-left: 45%;
-}
-
-#city{
-    animation:blinkingText 0.8s;
-    animation-iteration-count: 5;
-    margin-left: 45%;
-}
-
-#town{
-    animation:blinkingText 0.8s;
-    animation-iteration-count: 5;
-    margin-left: 45%;
-}
 
 /* styling the form */
 #form{
@@ -141,7 +113,7 @@ p{
     margin-right:0%;
     border: 0.02rem;
     float:left;
-    color:black;
+    color: #0e0d0d;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -159,7 +131,7 @@ input {
 .submit{
     display: inline-block;
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: #ec4122;
     border: none;
     color: #FFFFFF;
     text-align: center;
