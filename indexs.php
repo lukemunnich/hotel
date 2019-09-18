@@ -15,7 +15,7 @@ session_start();
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
-<link rel="stylesheet" href="css/hotel.css">
+<link rel="stylesheet" href="css/style.css">
 
 <title>hotel booking</title>
 </head>
@@ -23,14 +23,7 @@ session_start();
 <body>
 
 <!-- creating hotel options -->
-<h1>choose your dream Holiday</h1>
-
-<div class="price">
-<p id="inn">Holiday Inn: R 200 pp per night</p>
-<p id="rad">Ranger Bay Hotel: R 100 pp per night</p>
-<p id="city">City Family lodge: R 400 per night 4(beds)</p>
-<p id="town">City Main Town Lodge: R 150 pp per night</p>
-</div>
+<h1><b>choose your dream Holiday</b></h1>
 
 <!-- creating a form -->
 <div id='form'>
@@ -103,7 +96,7 @@ $checkInStamp = strtotime($_SESSION['indate']);
         $checkOutStamp = strtotime($_SESSION['outdate']);
         if ($checkInStamp - $checkOutStamp > 86400 || $checkInStamp == $checkOutStamp) {
             header("Location: ?error=timestamp");
-            exit;
+        exit;
         }
 
 //number of days booked 
