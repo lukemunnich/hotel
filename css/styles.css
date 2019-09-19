@@ -219,11 +219,12 @@ input {
    padding-top: 100px;
 }
 
+/* styling second button */
 #buttons{
-    background-color: #998ff1;
-    width: 40%;
+    background-color: #ec4122;
+    width: 70%;
     padding: 5px 15px;
-    margin-left:35%;
+    
 }
 
 .image-holder{

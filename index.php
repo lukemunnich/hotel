@@ -15,7 +15,7 @@ session_start();
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/styles.css">
 
 <title>hotel booking</title>
 </head>
@@ -88,7 +88,7 @@ function myFunction(imgs) {
 
 <!-- using php to creat table in mysql -->
 <?php
-require_once "connect.php";
+require_once "config/connect.php";
 echo $conn->error;
 
 $sql = "CREATE TABLE IF NOT EXISTS bookings (
@@ -167,7 +167,7 @@ $surname = $_POST['surname'];
 
 $result = mysqli_query($conn,"SELECT hotelname, indate, outdate, firstname, surname FROM bookings WHERE firstname='$firstname' && surname='$surname'"); 
 if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {    
+while ($row = $result->fetch_assoc()) {    
  echo "<div class='duplicate'> You already have a booking. <br> Firstname: ". $row['firstname'] . "<br>
 Lastname: " . $row['surname'].
 "<br> Start Date: " . $row['indate'].
@@ -185,8 +185,8 @@ echo '<div class="return">'. "<br> Firstname:".  $_SESSION['firstname']."<br>".
 "Hotel Name:". $_SESSION['hotelname']."<br>".
 "Total R" . $value ;
 
-echo "<form role='form' action=" . htmlspecialchars($_SERVER['PHP_SELF']) . " method='post'>
-<button name='confirm' type='submit'id='buttons> Confirm </button> </form>".'</div>';
+echo "<form role='form' action=" . htmlspecialchars($_SERVER['PHP_SELF']) . " method='post'><br>
+<button name='confirm' type='submit'id='buttons'> Confirm </button> </form>".'</div>';
 }
 
 // creating a method

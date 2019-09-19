@@ -8,7 +8,7 @@
 
 <?php
 // linking to login credentials for database in origin.php
-require_once 'origin.php';
+require_once 'config/origin.php';
 
 //create connection. First need to instantiate new mysqli class
 $conn =  new mysqli("localhost", "root", "", "hotels");
